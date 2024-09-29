@@ -20,7 +20,7 @@ nav{
     background: #222;
     padding: 5px 20px;
     display: flex;
-    align-items: center;
+    //align-items: center;
 }
 
 nav a{
@@ -77,14 +77,20 @@ ul li ul.dropdown{
 ul li:hover .dropdown{
     display: block;
 }
-
+#content{
+    display:flex;
+    flex-direction:column;
+    max-width:960px;
+    margin:0 auto;
+}
 
 .container{
     max-width: 960px;
-    //display: flex;
+    display: flex;
     //align-items: center;
     margin:10px auto;
     font-family: "Montserrat", sans-serif;
+    order: 1;
 }
 .container img{
     margin: 10px;
@@ -92,7 +98,7 @@ ul li:hover .dropdown{
 
 .container ul{
     list-style:none;
-
+    order:2;
 }
 
 .container ul li a{
@@ -114,10 +120,11 @@ ul li:hover .dropdown{
 
 .table_container{
     max-width: 960px;
-    //display: flex;
+    display: flex;
     //align-items: center;
     margin:10px auto;
     font-family: "Montserrat", sans-serif;
+    order: 2;
 }
 
 table {
@@ -247,6 +254,17 @@ tbody tr.hide td img {
     background-color: #6fcaea;
 }
 
+.container_form{
+    max-width: 960px;
+    display: flex;
+    //align-items: center;
+    margin:10px auto;
+    font-family: "Montserrat", sans-serif;
+    order: 3;
+}
+
+
+
 .copyright-text{
     max-width: 960px;
     //display: flex;
@@ -255,6 +273,7 @@ tbody tr.hide td img {
     justify-content: center;
     margin:50px auto;
     font-family: "Montserrat", sans-serif;
+    order: 4;
 }
 
 .copyright-text p {
@@ -266,4 +285,25 @@ tbody tr.hide td img {
   color: #ff5e14;
 }
 
+
+@media (max-width:890px){
+    nav{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .table_container{
+        order: 1;
+    }
+
+    .container{
+        order: 2;
+    }
+
+
+}
 
