@@ -1,199 +1,178 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
-    <title>Пример страницы с гиперссылками и формой</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Мой сайт</title>
 </head>
 <body>
-
-
-
-<header>
-    <nav>
-        <div class="logo">
-            <a href="#"> <img src="logo.png" alt="logo"> Quake </a>
-        </div>
-
-        <ul class="menu">
-            <li> <a href="#">Home</a> </li>
-            <li> <a href="#">About</a> </li>
-            <li> <a href="#">Dropdown &#x25BE</a>
-                <ul class="dropdown">
-                    <li> <a href="#">Link 1</a> </li>
-                    <li> <a href="#">Link 2</a> </li>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <img src="logo.png" class="img-thumbnail" alt="logo">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active mx-lg-2" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">About</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Services</a>
+              </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-            </li>
-
-        </ul>
-    </nav>
-</header>
-<div id="content">
-<div class="container">
-    <ul>
-        <li><a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
-        <li><a href="https://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе HTTPS</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Dodo" id="dodo"><img src="dodo.jpg" alt="Ссылка-изображение" width="200"></a></li>
-        <li><a href="/Web/Exercice1/level1/level2/internal.html">Сокращенная ссылка на внутреннюю страницу</a></li>
-        <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
-        <li><a href="#dodo">Ссылка на фрагмент текущей страницы</a></li>
-        <li><a href="internal.html?param1=value1&param2=value2&param3=value3">Ссылка с тремя параметрами в URL</a></li>
-        <li><a href="internal.html?id=1">Ссылка с параметром id в URL</a></li>
-        <li><a href="internal.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-        <li><a href="../../about/about.html">Относительная ссылка на страницу в каталоге about</a></li>
-        <li><a href="../level1.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-        <li><a href="../../../level0.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-        <li> <a class="context_link" href="https://ru.wikipedia.org/wiki/Краснодар">Краснодар </a>  — город-миллионер на юго-западе России, административный центр Краснодарского края. Один из крупнейших и самых многонаселённых городов Юга России.</li>
-        <li><a href="https://ru.wikipedia.org/wiki/Краснодар#Этимология">Ссылка на фрагмент страницы стороннего сайта</a></li>
-        <map name="circle_and_square">
-            <area shape="circle" coords="729,288,112" href="https://ru.wikipedia.org/wiki/Круг,_Михаил_Владимирович">
-            <area shape="rect" coords="158,185,367,391" href="https://ru.wikipedia.org/wiki/Губка_Боб_Квадратные_Штаны">
-        </map>
-        <li>
-            <img src="circleandsquare.png" usemap="#circle_and_square">
-        </li>
-        <li><a href="#">Ссылка с пустым href</a></li>
-        <li><a>Ссылка без href</a></li>
-        <li><a href="#" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
-        <li><noindex><a href="#" >Запрещенная для индексации поисковиками</a></noindex></li>
-        <li>
-            <ol>
-                <li><a href="https://vk.com/steazy" title="Милая капибара">Степан Чекан</a></li>
-                <li><a href="https://vk.com/qwertyman0848" title="Связь с додо инспектором">Павел Алефиров</a></li>
-            </ol>
-        </li>
-        <li><a href="ftp://user:password@ftp.example.com/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
-    </ul>
-</div>
-
- <div class="table_container">
-            <table>
-                <thead>
-                    <tr>
-                        <th> Id <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Customer <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Order <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Date <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Amount <span class="icon-arrow">&UpArrow;</span></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> 1 </td>
-                        <td> <img src="images/pablo.jpg" alt="">Pavel Fat</td>
-                        <td> Pesto x 52 </td>
-                        <td rowspan="2"> 17 Dec, 2022 </td>
-                        <td>
-                            <p class="status delivered">Delivered</p>
-                        </td>
-                        <td> <strong> $17.00 </strong></td>
-                    </tr>
-                    <tr>
-                        <td> 2 </td>
-                        <td><img src="images/albert.jpg" alt=""> Alberto Gref </td>
-                        <td> Cheesy Chicken x 14</td>
-                        <td>
-                            <p class="status cancelled">Cancelled</p>
-                        </td>
-                        <td> <strong>$88.00</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 3</td>
-                        <td><img src="images/bobr.jpg" alt=""> Bob Woody </td>
-                        <td> Tea with honey </td>
-                        <td> 14 Mar, 2023 </td>
-                        <td>
-                            <p class="status shipped">Shipped</p>
-                        </td>
-                        <td> <strong>$5.00</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 4</td>
-                        <td><img src="images/lesha.jpg" alt=""> Alex Hedgehog </td>
-                        <td> Apple x 10 </td>
-                        <td> 25 May, 2023 </td>
-                        <td rowspan="2">
-                            <p class="status delivered">Delivered</p>
-                        </td>
-                        <td> <strong>$25.70</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 5</td>
-                        <td><img src="images/oleg.jpg" alt=""> Alibi Oleg </td>
-                        <td> Dodster x 1 </td>
-                        <td> 23 Apr, 2023 </td>
-
-                        <td> <strong>$6.99</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 6</td>
-                        <td><img src="images/pole.jpg" alt=""> Pole </td>
-                        <td> Green pants x 1 </td>
-                        <td> 23 Apr, 2023 </td>
-                        <td>
-                            <p class="status cancelled">Cancelled</p>
-                        </td>
-                        <td> <strong>$99.99</strong> </td>
-                    </tr>
-
-                </tbody>
-            </table>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </nav>
 
+    <section class="hero-section">
+      <div class="px-4 py-5 main">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
 
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Default radio
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Default checked radio
+              </label>
+            </div>
+            <select class="form-select" multiple aria-label="Multiple select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>
+      </div>
+    </section>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="logo.png" class="bi me-2" alt="logo" width="40" height="32">
 
-<div class="container_form">
+            </a>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
-    <form action="#" method="post">
-        <label for="fullname">ФИО:</label><br>
-        <input required = "required" pattern="[а-яА-Яa-zA-Z ]+" type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович"><br><br>
-
-        <label for="phone">Телефон:</label><br>
-        <input required = "required"  pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX"><br><br>
-
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required = "required"><br><br>
-
-        <label for="birthdate">Дата рождения:</label><br>
-        <input type="date" id="birthdate" name="birthdate" required = "required"><br><br>
-
-        <label>Пол:</label><br>
-        <input required = "required" type="radio" id="male" name="gender" value="male">
-        <label for="male">Мужской</label><br>
-        <input required = "required" type="radio" id="female" name="gender" value="female">
-        <label for="female">Женский</label><br><br>
-
-        <label for="programming-language">Любимый язык программирования:</label><br>
-        <select required = "required" id="programming-language" name="programming-language" multiple="multiple">
-            <option value="Pascal">Pascal</option>
-            <option value="C">C</option>
-            <option value="C++">C++</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="PHP">PHP</option>
-            <option value="Python">Python</option>
-            <option value="Java">Java</option>
-            <option value="Haskel">Haskel</option>
-            <option value="Clojure">Clojure</option>
-            <option value="Prolog">Prolog</option>
-            <option value="Scala">Scala</option>
-        </select><br><br>
-
-        <label for="bio">Биография:</label><br>
-        <textarea required = "required" id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
-
-        <input required = "required" type="checkbox" id="contract" name="contract">
-        <label for="contract">С контрактом ознакомлен(а)</label><br><br>
-
-        <input type="submit" value="Сохранить">
-    </form>
-</div>
-</div>
-<footer class="copyright-text">
-    <p>Maria Koltovich &copy; 2024, All Right Reserved </p>
-</footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
